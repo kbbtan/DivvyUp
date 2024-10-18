@@ -4,12 +4,11 @@ async def generate_users_inline_buttons(bot, chat_id):
     """ This function obtains the members list of a chat and generates an InlineKeyboardMarkup
         containing InlineKeyboardButtons representing each member.
         
-        Inputs:
-            bot: pyrogram Client to invoke the get_chat_members function
-            chat_id: chat_id of the group to query
+        :param pyrogram.Client bot: bot invokes methods for querying Telegram group information
+        :param int chat_id: chat_id of the Telegram group to query
 
-        Returns:
-            InlineKeyboardMarkup with an InlineKeyboardButton for each user in the group
+        :rtype: pyrogram.InlineKeyboardMarkup
+        :return: InlineKeyboardMarkup object containing an InlineKeyboardButton for each user in the group
     """
     markup = []
 
