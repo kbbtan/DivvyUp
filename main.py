@@ -1,10 +1,11 @@
 from pyrogram import Client, filters
+from pyrogram.types import Message, InlineKeyboardMarkup
 from helper_methods import generate_users_inline_buttons
 
 bot = Client("my_bot")
 
 @bot.on_message(filters.command("add_expense") & filters.group)
-async def add_expense(client, message):
+async def add_expense(client: Client, message: Message) -> None:
     """ This function handles calls to the /add_expense command.
 
         :param pyrogram.Client client: Client object representing the Telegram bot

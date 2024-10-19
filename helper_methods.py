@@ -1,6 +1,7 @@
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from pyrogram import Client
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ChatMember
 
-async def generate_users_inline_buttons(bot, chat_id):
+async def generate_users_inline_buttons(bot: Client, chat_id: int) -> InlineKeyboardMarkup:
     """ This function obtains the members list of a chat and generates an InlineKeyboardMarkup
         containing InlineKeyboardButtons representing each member.
         
